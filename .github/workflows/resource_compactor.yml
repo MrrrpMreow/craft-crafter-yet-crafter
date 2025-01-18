@@ -9,12 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Zip Folder
-        run: |
-          ls
-          cd ../
-          ls
-          rm -rf resources.zip
-          zip -r resources.zip craft-crafter-yet-crafter -x ".git/*" ".github/*"
+        run: ls
       - name: Send ZIP to Release
         env:
           GH_TOKEN: ${{ github.token }}
