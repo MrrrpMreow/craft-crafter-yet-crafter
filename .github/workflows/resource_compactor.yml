@@ -15,7 +15,9 @@ jobs:
         path: 'resources'
     - name: Zip Folder
       run: |
-       zip -r resources.zip resources/*
+        cd resources/
+        zip -r ../resources.zip
+        cd ..
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
