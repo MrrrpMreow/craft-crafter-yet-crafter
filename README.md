@@ -13,6 +13,7 @@ Feel free to fork this and make a PR if you want to request changes!
   - Armor Statues
   - Mob/Player Heads
   - Mini Blocks
-  - Various Crafting Tweaks
+  - Various [Crafting Tweaks](https://github.com/MrrrpMreow/craft-crafter-yet-crafter/blob/master/Crafting%20Tweaks.txt)
 
-Plus some other various stuff
+[Plus some other various stuff
+](https://github.com/MrrrpMreow/craft-crafter-yet-crafter/blob/master/List%20of%20Stuff.png)
