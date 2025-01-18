@@ -8,12 +8,31 @@ jobs:
     name: Zip and Push
     runs-on: ubuntu-latest
     steps:
-      - name: Zip Folder
-        run: |
-          zip -r ./resources.zip ${{ github.workspace }}
-      - name: Send ZIP to Release
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          cd ${{ github.workspace }}
-          gh release upload auto_release ./resources.zip
+    - name: Zip Folder
+      run: |
+        zip -r ./resources.zip ${{ github.workspace }}
+    - name: Send ZIP to Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: auto_release
+        release_name: Automatic Release
+        draft: true
+        prerelease: false
+
+    - uses: actions/upload-release-asset@v1.0.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./resources.zip
+        asset_name: resources.zip
+        asset_content_type: application/zip
+
+    - uses: eregon/publish-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        release_id: ${{ steps.create_release.outputs.id }}
