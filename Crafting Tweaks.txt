@@ -1,0 +1,13 @@
+Vanilla Tweaks Crafting Tweaks
+Version: 1.21
+Packs:
+	unpackable ice
+	unpackable wool
+	craftable notch apples
+	more stairs
+	back to blocks
+	rotten flesh to leather
+	copper powered rails
+	universal dyeing
+	straight to shapeless
+	blackstone cobblestone
