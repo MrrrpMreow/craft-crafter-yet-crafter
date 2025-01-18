@@ -8,9 +8,14 @@ jobs:
     name: Zip and Push
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0 # A non-shallow repository clone is required
+        path: 'resources'
     - name: Zip Folder
       run: |
-       zip -r ./resources.zip ${{ github.workspace }}
+       zip -r resources.zip resources/
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
