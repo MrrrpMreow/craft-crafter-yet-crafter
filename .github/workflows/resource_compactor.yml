@@ -14,5 +14,7 @@ jobs:
           rm -rf resources.zip
           zip -r resources.zip craft-crafter-yet-crafter -x ".git/*" ".github/*"
       - name: Send ZIP to Release
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           gh release upload auto_release resources.zip
