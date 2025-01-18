@@ -16,7 +16,7 @@ jobs:
     - name: Zip Folder
       run: |
         cd resources/
-        zip -r ../resources.zip
+        zip -r ../resources.zip ./*
         cd ..
     - name: Create Release
       id: create_release
