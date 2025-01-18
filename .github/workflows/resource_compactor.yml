@@ -11,7 +11,6 @@ jobs:
       - name: Zip Folder
         run: |
           cd ${{ github.workspace }}
-          rm ./resources.zip
           zip -r ./resources.zip ./
       - name: Send ZIP to Release
         env:
