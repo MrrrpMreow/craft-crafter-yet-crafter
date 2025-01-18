@@ -1,0 +1,15 @@
+name: Zip repository and put on S3
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  zip-n-push:
+    name: Zip and Push
+    runs-on: ubuntu-latest
+    steps:
+      - name: Zip Folder
+        run: |
+          cd ../ # I added this
+          rm -rf resources.zip
+          zip -r resources.zip craft-crafter-yet-crafter -x ".git/*" ".github/*"
