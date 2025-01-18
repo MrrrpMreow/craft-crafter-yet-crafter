@@ -15,4 +15,4 @@ jobs:
           zip -r resources.zip craft-crafter-yet-crafter -x ".git/*" ".github/*"
       - name: Send ZIP to Release
         run: |
-          gh release upload ${{github.event.release.tag_name}} resources.zip
+          gh release upload auto_release resources.zip
