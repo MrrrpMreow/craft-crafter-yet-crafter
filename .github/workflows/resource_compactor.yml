@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Zip Folder
-        run: ls
+        run: ls ./
       - name: Send ZIP to Release
         env:
           GH_TOKEN: ${{ github.token }}
