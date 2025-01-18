@@ -153,7 +153,7 @@
   "mcpaint.format.rp_missing": "",
   "mcpaint.format.rp_version": "%s",
   "mcpaint.format.rp_version.1.5": "RP v1.5 installiert! %2$s %3$s",
-  "mcpaint.format.page_n_of": "%s/%s"
+  "mcpaint.format.page_n_of": "%s/%s",
     "item.minecraft.lingering_potion.effect.dnt_blindness": "Verweiltrank der Blindheit",
     "item.minecraft.tipped_arrow.effect.dnt_levitation": "Pfeil der Schwebekraft",
     "item.minecraft.lingering_potion.effect.dnt_levitation": "Verweiltrank der Schwebekraft",
