@@ -10,10 +10,10 @@ jobs:
     steps:
       - name: Zip Folder
         run: |
-          cd ${{ github.workspace }}
-          zip -r ./resources.zip .
+          zip -r ./resources.zip ${{ github.workspace }}
       - name: Send ZIP to Release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          cd ${{ github.workspace }}
           gh release upload auto_release ./resources.zip
