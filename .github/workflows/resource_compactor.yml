@@ -13,3 +13,6 @@ jobs:
           cd ../ # I added this
           rm -rf resources.zip
           zip -r resources.zip craft-crafter-yet-crafter -x ".git/*" ".github/*"
+      - name: Send ZIP to Release
+        run: |
+          gh release upload ${{github.event.release.tag_name}} resources.zip
